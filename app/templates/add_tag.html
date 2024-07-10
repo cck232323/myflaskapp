@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Tag</title>
+    <style>
+        /* 添加背景图片样式 */
+        body {
+            background-image: url('/static/images/im1.jpg');
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-repeat: no-repeat; /* 不重复背景图 */
+            background-attachment: fixed; /* 背景图固定，内容滚动 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a Tag to Post</h1>
+    <form method="POST">
+        <label for="tag_name">Tag Name:</label>
+        <input type="text" name="tag_name" id="tag_name" required><br>
+
+        <input type="submit" value="Add Tag">
+    </form>
+</body>
+</html>

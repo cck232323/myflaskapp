@@ -1,0 +1,35 @@
+
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Tag</title>
+    <style>
+        /* 添加背景图片样式 */
+        body {
+            background-image: url('/static/images/im1.jpg');
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-repeat: no-repeat; /* 不重复背景图 */
+            background-attachment: fixed; /* 背景图固定，内容滚动 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Tag</h1>
+    <h2>All Post IDs</h2>
+    <ul>
+        {% for post in posts %}
+            <li>Post ID: {{ post.id }}</li>
+        {% endfor %}
+    </ul>
+    <form method="POST" action="{{ url_for('tag.create_view') }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br>
+        
+        <label for="post_id">Post ID:</label>
+        <input type="text" name="post_id" id="post_id" required><br>
+        
+        <input type="submit" value="Create Tag">
+    </form>
+</body>
+</html>

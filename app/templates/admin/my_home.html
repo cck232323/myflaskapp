@@ -1,0 +1,33 @@
+
+
+
+{% extends 'admin/base.html' %}
+
+{% block head %}
+    {{ super() }}
+    <!-- 任何额外的头部内容 -->
+    <style>
+        /* 添加背景图片样式 */
+        body {
+            background-image: url('/static/images/im1.jpg');
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-repeat: no-repeat; /* 不重复背景图 */
+            background-attachment: fixed; /* 背景图固定，内容滚动 */
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+
+    <!-- 例如，您可以添加一个欢迎消息 -->
+    <div class="welcome-msg">
+        <h1>Welcome to the Admin Dashboard</h1>
+    </div>
+
+    <!-- 添加一个链接到 posts 页面 -->
+    <div class="posts-link">
+        <a href="{{ url_for('main.index') }}" class="btn btn-primary">Go to Posts</a>
+    </div>
+
+{% endblock %}

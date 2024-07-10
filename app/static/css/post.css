@@ -1,0 +1,98 @@
+/* 这是一个注释 */
+
+/* 为所有的 body 元素设置样式 */
+body {
+    background-color: #f8f8f8; /* 设置背景颜色 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+}
+
+/* 为所有的 h1 标签设置样式 */
+h1 {
+    color: #333; /* 设置文字颜色 */
+    text-align: center; /* 文字居中 */
+}
+
+/* 为 class="button" 的元素设置样式 */
+.button {
+    background-color: #007bff; /* 设置背景颜色 */
+    color: white; /* 设置文字颜色 */
+    padding: 10px 20px; /* 设置内边距 */
+    border: none; /* 无边框 */
+    border-radius: 5px; /* 边角圆滑处理 */
+    cursor: pointer; /* 鼠标悬浮时显示指针图标 */
+}
+
+/* 为 id="navigation" 的元素设置样式 */
+#navigation {
+    background-color: #333; /* 设置背景颜色 */
+    color: white; /* 设置文字颜色 */
+    padding: 10px; /* 设置内边距 */
+}
+
+/* 为所有的链接设置样式，包括伪类 */
+a, a:visited {
+    color: #007bff; /* 链接的颜色 */
+    text-decoration: none; /* 去除下划线 */
+}
+
+a:hover {
+    text-decoration: underline; /* 鼠标悬浮时添加下划线 */
+}
+
+/* 响应式设计：当屏幕宽度小于600px时 */
+@media (max-width: 600px) {
+    .button {
+        width: 100%; /* 按钮宽度为100% */
+        box-sizing: border-box; /* 盒模型的设置，防止padding影响宽度计算 */
+    }
+}
+
+img {
+    max-width: 100%; /* 图像最大宽度为100% */
+    height: auto; /* 图像高度自动调整以保持纵横比 */
+}
+
+.comment {
+    padding: .5rem 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: .25rem;
+    background-color: #f9f9f9;
+    margin-top: .5rem; /* 评论之间的顶部间距 */
+}
+
+.comment p {
+    margin-bottom: .25rem;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 两端对齐 */
+}
+
+.comment-actions a {
+    text-decoration: none;
+    font-size: .875em;
+}
+
+.comment-actions small {
+    font-size: .75em;
+}
+
+/* 添加楼中楼回复的样式 */
+.comment-reply {
+    margin-top: .5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ccc; /* 给楼中楼评论添加左边界以区分 */
+    background-color: #f4f4f4; /* 可以选择一个稍微不同的背景色 */
+}
+
+/* 确保评论区域有足够的间距 */
+.comment {
+    margin-bottom: .5rem;
+}
+.comment-background {
+    background-image: url('/static/images/blue.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

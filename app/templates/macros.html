@@ -1,0 +1,12 @@
+{% macro render_replies(replies) %}
+    <ul>
+        {% for reply in replies %}
+            <li>{{ reply.content }} by {{ reply.user.username }}</li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+<!-- 在这里，您可以定义更多的宏 -->
+{% macro another_macro() %}
+    <!-- 更多的宏内容 -->
+{% endmacro %}

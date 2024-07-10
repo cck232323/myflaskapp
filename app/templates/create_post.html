@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Post</title>
+    <style>
+        /* 添加背景图片样式 */
+        body {
+            background-image: url('/static/images/im1.jpg');
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-repeat: no-repeat; /* 不重复背景图 */
+            background-attachment: fixed; /* 背景图固定，内容滚动 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a New Post</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required><br>
+
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author" required><br>
+
+        <label for="content">Content:</label>
+        <textarea name="content" id="content" required></textarea><br>
+
+        <label for="image">Image:</label>
+        <input type="file" name="image" id="image"><br>
+
+        <input type="submit" value="Create Post">
+    </form>
+
+    <h2>Existing Posts</h2>
+    <ul>
+        {% for post in posts %}
+            <li>Post ID: {{ post.id }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

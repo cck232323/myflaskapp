@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Comment</title>
+    <style>
+        /* 添加背景图片样式 */
+        body {
+            background-image: url('/static/images/im1.jpg');
+            background-size: cover; /* 背景图片覆盖整个页面 */
+            background-repeat: no-repeat; /* 不重复背景图 */
+            background-attachment: fixed; /* 背景图固定，内容滚动 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a Comment to Post</h1>
+    <form method="POST">
+        <label for="comment_content">Comment:</label>
+        <textarea name="comment_content" id="comment_content" required></textarea><br>
+
+        <!-- 隐藏字段用于存储父评论的ID -->
+        {% if parent_id %}
+            <input type="hidden" name="parent_id" value="{{ parent_id }}">
+        {% endif %}
+
+        <input type="submit" value="Add Comment">
+    </form>
+</body>
+</html>

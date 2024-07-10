@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .bg {
+            /* 使用您的背景图片路径替换 'background.jpg' */
+            background-image: url('/static/images/bg.jfif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+
+        .login-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input, div {
+            margin-bottom: 10px;
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type=checkbox] {
+            margin-bottom: 20px;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg">
+    <div class="login-container">
+        <h1>Login to MyBlog</h1>
+        <p>Please enter your credentials to login. If you are an administrator, make sure to check the "Login as Admin" box.</p>
+        <form action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <div>
+                <input type="checkbox" name="is_admin" id="is_admin" value="on">
+                <label for="is_admin">Login as Admin</label>
+            </div>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
